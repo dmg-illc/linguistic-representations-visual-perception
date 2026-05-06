@@ -40,18 +40,13 @@ for batch in batchify(img_file_names, batch_size):
         mean_per_layer = [layer_hidden[i].mean(axis=0) for layer_hidden in hidden_states]
         mean_feature_reps.append(np.stack(mean_per_layer))  # (num_layers * hidden_dim,)
 
-        # cls
-        cls_per_layer = [layer_hidden[i][0] for layer_hidden in hidden_states]
-        cls_feature_reps.append(np.stack(cls_per_layer))  # (num_layers * hidden_dim,)
-
     del images, inputs, output, hidden_states
 
 
 
 
 mean_ftr_dict = {image_id: features for image_id, features in zip(image_ids, mean_feature_reps)}
-cls_dict = {image_id: features for image_id, features in zip(image_ids, cls_feature_reps)}
 
 (ROOT / f'results/image_features/dino').mkdir(parents=True, exist_ok=True)
 
-save_pickle(cls_dict, ROOT / f'results/image_features/dino/dino_cls.pkl')
+save_pickle(mean_ftr_dict, ROOT / f'results/image_features/dino/dino.pkl')
