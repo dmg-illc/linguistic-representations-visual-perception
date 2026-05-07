@@ -2,6 +2,11 @@
 
 This repository contains the research code for the paper _What Makes Linguistic Representations Good Models of High-Level Visual Perception in the Human Brain?_, by Anna Bavaresco, Ina Klarić, Raquel Fernández, and Sien Moens. 
 
+
+<img width="3444" height="856" alt="exp_pipeline_1" src="https://github.com/user-attachments/assets/751e193c-2d48-4de7-b156-010f916be9fd" />
+
+<img width="2905" height="2199" alt="exp_pipeline_2" src="https://github.com/user-attachments/assets/a68adbc5-d504-49d9-a456-943868da058d" />
+
 The repository is structured as follows:
 ```
 .
@@ -41,7 +46,7 @@ The repository is structured as follows:
 
 ## Data
 
-The data analyses in our experiments comes from two main sources:
+The data analyses in our experiments come from two main sources:
 1. The [Natural Scenes Dataset](https://www.nature.com/articles/s41593-021-00962-x), providing fMRI responses and behavioural judgments over multiple images;
 2. The [MS COCO dataset](https://link.springer.com/chapter/10.1007/978-3-319-10602-1_48), introducing the images used as stimuli in the NSD experiments and crowdsourced image captions. 
 
@@ -53,7 +58,7 @@ The image stimuli shown to the participants in the NSD experiments are publicly 
 
 It is also useful to download [this file](https://natural-scenes-dataset.s3.amazonaws.com/nsddata/experiments/nsd/nsd_expdesign.mat), allowing to map between NSD and MS COCO indexing conventions. 
 
-Instructions on how to dowload the MS COCO captions are provided in [TODO].
+Instructions on how to download the MS COCO captions are provided in [TODO].
 
 ## Setup
 
@@ -78,4 +83,4 @@ Additional code to analyse these results is provided in `data_analyses`. More sp
 * Visualising neural and behavioural RSA results;
 * Fitting mixed-effects models to brain encoding, neural RSA, and behavioural RSA results.
 
-To facilitate reproducing plots and statistical analyses, we include a subset of our main results in `results`.
+To facilitate the reproduction of plots and statistical analyses, we include a subset of our main results in `results`.
