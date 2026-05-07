@@ -28,6 +28,7 @@ The repository is structured as follows:
 │   ├── get_embeddings.sh
 │   ├── get_model_captions.sh
 │   └── run_rsa.sh
+├── requirements.txt
 ├── results
 │   ├── lm_brain_rsa_results.csv
 │   ├── lm_encoding.csv
