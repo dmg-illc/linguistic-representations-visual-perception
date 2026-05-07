@@ -5,7 +5,7 @@
 #SBATCH --ntasks=1
 #SBATCH --gpus=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=01:00:00
+#SBATCH --time=03:00:00
 #SBATCH --output=job-scripts/outs/slurm_output_encod.out
 #SBATCH --error=job-scripts/outs/slurm_err_encod.err
 #SBATCH --mail-type=END

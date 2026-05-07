@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from matplotlib.patches import Patch
 from src.fmri_responses.fmri_loading import ParticipantResponses
-from src.brain_encoding.intrinsic_dimensionality import IDAnalysis
+# from src.brain_encoding.intrinsic_dimensionality import IDAnalysis
 
 
 class ParticipantResults():
@@ -265,7 +265,7 @@ class BrainPlotManager():
         if target_roi not in self.brain_rois:
             raise ValueError("Enter a valid brain ROI!")
         
-        dataframe = pd.read_csv(ROOT / 'results/encoding/encoding_by_model' / 'all_rois-results.csv') 
+        dataframe = pd.read_csv(ROOT / 'results/lm_encoding.csv') 
         cmap = plt.get_cmap('tab10')
         plt.figure(figsize=(6,3), tight_layout=True)
         plt.grid(visible=True, axis='y')
@@ -307,7 +307,7 @@ class BrainPlotManager():
         if target_roi not in self.brain_rois:
             raise ValueError("Enter a valid brain ROI!")
         
-        dataframe = pd.read_csv(ROOT / 'results/encoding/encoding_by_model' / 'all_rois-results-visual.csv')
+        dataframe = pd.read_csv(ROOT / 'results/visual_models_encoding.csv')
         cmap = plt.get_cmap('tab10')
         plt.figure(figsize=(3,3), tight_layout=True)
         plt.grid(visible=True, axis='y')
