@@ -7,17 +7,23 @@ This repository contains the research code for the paper _What Makes Linguistic 
 
 <img width="2905" height="2199" alt="exp_pipeline_2" src="https://github.com/user-attachments/assets/a68adbc5-d504-49d9-a456-943868da058d" />
 
+
 The repository is structured as follows:
+
 ```
 .
 ├── LICENSE
 ├── README.md
+├── data
+│   └── Image captions.xlsx
 ├── data_analyses
 │   ├── brain_rsa
 │   ├── caption_metrics
 │   ├── encoding
-│   ├── prova.ipynb
 │   └── simj_rsa
+├── data_explore
+│   ├── get_images_and_coco_captions.ipynb
+│   └── simlarity_judgments.ipynb
 ├── job-scripts
 │   ├── get_embeddings.sh
 │   ├── get_model_captions.sh
@@ -54,11 +60,10 @@ The *fMRI responses* used in our study can be downloaded by running the file `sr
 
 The *behavioural similarity judgments* can be downloaded [here](https://natural-scenes-dataset.s3.amazonaws.com/nsddata/bdata/meadows/Meadows_nsd-multiple-arrangements_v_v2_tree.json).
 
-The image stimuli shown to the participants in the NSD experiments are publicly available [here](https://natural-scenes-dataset.s3.amazonaws.com/nsddata/stimuli/nsd/shared1000/).
+The image stimuli shown to the participants in the NSD experiments are publicly available [here](https://natural-scenes-dataset.s3.amazonaws.com/nsddata/stimuli/nsd/shared1000/) and can be downloaded and matched with MS COCO captions using the code provided in `data_explore/get_images_and_coco_captions.ipynb`.
 
 It is also useful to download [this file](https://natural-scenes-dataset.s3.amazonaws.com/nsddata/experiments/nsd/nsd_expdesign.mat), allowing to map between NSD and MS COCO indexing conventions. 
 
-Instructions on how to download the MS COCO captions are provided in [TODO].
 
 ## Setup
 
@@ -78,9 +83,11 @@ The main results from our paper can be reproduced by running the files contained
 4. Computing results from representational similarity analysis (RSA) on both neural and behavioural data (similarity judgments), using the code provided in `src/rsa`.
 
 Additional code to analyse these results is provided in `data_analyses`. More specifically, the notebooks included there allow:
-* Computing metrics (perplexity, lexical density, visualness) on different caption types; 
-* Visualising brain encoding results;
-* Visualising neural and behavioural RSA results;
-* Fitting mixed-effects models to brain encoding, neural RSA, and behavioural RSA results.
+* Computing metrics (perplexity, lexical density, visualness) on different caption types (`data_analyses/caption_metrics/caption_metrics.ipynb`); 
+* Visualising brain encoding results (`data_analyses/encoding/visualise_encoding_results.ipynb`);
+* Visualising neural and behavioural RSA results (`data_analyses/brain_rsa/rsa.ipynb` and `data_analyses/simj_rsa/simj_rsa.ipynb`);
+* Fitting mixed-effects models to brain encoding, neural RSA, and behavioural RSA results (`data_analyses/brain_rsa/statistical_analyses_brain_rsa.Rmd`, `data_analyses/encoding/statistical_analyses.Rmd`, and `data_analyses/simj_rsa/statistical_analyses_judg.Rmd`).
 
 To facilitate the reproduction of plots and statistical analyses, we include a subset of our main results in `results`.
+
+Additionally, we include all captions included in the experiments in `data/Image captions.xlsx`.
