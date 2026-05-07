@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 scenes/*
 src.egg-info/*
+results/*
 
 # C extensions
 *.so
