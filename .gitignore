@@ -5,6 +5,7 @@ __pycache__/
 scenes/*
 src.egg-info/*
 results/*
+.DS_Store
 
 # C extensions
 *.so
