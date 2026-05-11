@@ -2,6 +2,8 @@
 
 This repository contains the research code for the paper _What Makes Linguistic Representations Good Models of High-Level Visual Perception in the Human Brain?_, by Anna Bavaresco, Ina Klarić, Raquel Fernández, and Sien Moens. 
 
+The Supplemetary Materials referenced in the paper are included in this reposotory, in `supplementary_materials/supplementary_materials.pdf`.
+
 
 <img width="3444" height="856" alt="exp_pipeline_1" src="https://github.com/user-attachments/assets/751e193c-2d48-4de7-b156-010f916be9fd" />
 
@@ -35,19 +37,20 @@ The repository is structured as follows:
 │   ├── lm_judg_rsa_results.csv
 │   └── visual_models_encoding.csv
 ├── setup.py
-└── src
-    ├── __init__.py
-    ├── __pycache__
-    ├── brain_encoding
-    ├── caption_generation
-    ├── caption_metrics
-    ├── fmri_responses
-    ├── indexing_and_formatting
-    ├── paths.py
-    ├── representation_extraction
-    ├── rsa
-    └── utils.py
-
+├── src
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── brain_encoding
+│   ├── caption_generation
+│   ├── caption_metrics
+│   ├── fmri_responses
+│   ├── indexing_and_formatting
+│   ├── paths.py
+│   ├── representation_extraction
+│   ├── rsa
+│   └── utils.py
+└── supplementary_materials
+    └── supplementary_materials.pdf
 
 ```
 
@@ -92,3 +95,4 @@ Additional code to analyse these results is provided in `data_analyses`. More sp
 To facilitate the reproduction of plots and statistical analyses, we include a subset of our main results in `results`.
 
 Additionally, we include all captions included in the experiments in `data/Image captions.xlsx`.
+
